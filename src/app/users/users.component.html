@@ -1,8 +1,28 @@
+<!-- <p>users works</p>
 <div>
-    <div>user with id is {{users.id}}</div>
-    <div>user with name is {{users.name1}}</div>
+    <a routerLink="/catagories">Go to catagories</a> 
+    <button (click)="onCatagories()">Go to catagories</button>
 </div>
 
+<a [routerLink]="['/users',1, 'singh']"
+[queryParams]="{page:1 ,search:'singh'}"
+[fragment]="'loading'"
+>
+get singh detail
+</a> -->
+
+<ul class="nav flex-column">
+    <li class="nav-item">
+        <a [routerLink]="['/users', 1,'Rama']" [queryParams]="{page:1, search:'Rama'}"  class="nav-link">Get Rama Details</a>
+    </li>
+    <li class="nav-item">
+        <a [routerLink]="['/users', 1,'Hari']"  [queryParams]="{page:1, search:'Hari'}" class="nav-link">Get Hari Details</a>
+    </li>
+    <li class="nav-item">
+        <a [routerLink]="['/users', 1,'Krishna']"  [queryParams]="{page:1, search:'Krishna'}" class="nav-link">Get Krishna Details</a>
+    </li>
+</ul>
+
 <div>
-    <a [routerLink]="['/users']"></a>
+    <router-outlet></router-outlet>
 </div>

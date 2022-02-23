@@ -1,5 +1,4 @@
-import { rejects } from "assert";
-import { resolve } from "dns";
+
 
 export class AuthService{
     isLoggedIn= false;
@@ -12,11 +11,7 @@ export class AuthService{
     }
 
     isAuthenticated(){
-        // return this.isLoggedIn;
-        new Promise((resolve, reject)=>{
-            setTimeout(() => {
-                resolve(this.isLoggedIn);
-            }, 1000);
-        });
+         return this.isLoggedIn;
+       
     }
 }

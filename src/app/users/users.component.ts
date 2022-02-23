@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -8,16 +8,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class UsersComponent implements OnInit {
 
-  users: { id: string; name1: string };
-  constructor(private route: ActivatedRoute) { }
-
-  ngOnInit(): void {
-    this.users = {
-      id: this.route.snapshot.params['id'],
-      name1: this.route.snapshot.params['name1']
-    }; 
+  constructor(private router:Router) {
     
   }
+  ngOnInit(): void {}
+ onCatagories(){
+// this.router.navigateByUrl('/catagories')
+this.router.navigate(['/catagories']);
+ }
 
 
 }
